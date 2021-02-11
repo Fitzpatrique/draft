@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{% endblock %}
+ 
+{% block body %}
+ 
+
+<div>
+    <a href="#" ><img  onclick="closeAll()" onmouseover="closeAll()" src="{{ url_for('static', filename = 'img/alausa/sample.jpg')}}" width="100%" alt="image"></a>
+</div>
+
+
+<!--div id="sayduck" class="sayduck" onclick="closeAll(), activateSayduck()" onmouseover="closeAll()">
+    <div   class="sayduck-3d-viewer-container" style="min-height:350px;min-width:300px;width:100%;height:100%;"
+         data-product-uuid="79f2dc20-f1a7-0137-1516-7ab72a8ee39c" data-viewer-options='{"appearance":{"background":"light-gray"}}'>
+    </div><script defer type="text/javascript" src="https://viewer.sayduck.com"></script>
+</div-->
+
+<div onclick="closeAll()" onmouseover="closeAll()">
+    <div class="newsletter" >
+        <div class="words">
+            <h3>Join our newsletter for free</h3>
+            <h4>We'll email you a coupon worth  off your first order over ₦500. By subscribing you agree to our Terms & Conditions and Privacy & Cookies Policy.</h4>
+        </div>
+        <div class="letter-box">
+            <form>
+                <input class="input-email" type="text" placeholder="Enter email">
+                <button class="btn1" type="submit">GO</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+{% endblock %}

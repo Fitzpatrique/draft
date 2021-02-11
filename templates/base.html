@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+{% block html %}
+<head>
+  <meta charset="utf-8">
+  <meta name="theme-color">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title> Taeillo </title>
+  <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename = 'styles/index.css')}}"/>
+  <link rel="icon" type="image/jpg" href="{{ url_for('static', filename = 'img/taeillo1.jpg')}}" > 
+  <!--link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora|Ubuntu:400,700&display=swap"-->
+  <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}">
+  <meta name = "description" content = "Best Furnitures for your homes and offices">
+  <meta name="keywords" content="Best, Furniture, Home, office, Chair, Table, Ottoman, Comfort, Quality">
+   
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@600&display=swap" rel="stylesheet">
+  {% block head %}{% endblock %}
+  
+</head>
+  <body>
+
+    <header>
+      <div >
+          <div class="ann"> Shop Valentine Deals 1st-28th Taeillo'd for you</div>
+          <div class="header">
+              <a href="#"><img class="logo-image" src="{{ url_for('static', filename = 'img/taeillo.jpg')}}" alt="image"></a>
+              
+              <ul class="nav">
+                  <li><a  href="#" onclick="openShop()" onmouseover="openShop(), closeAll()"></a>Shop</a></li>
+                  <li><a href="#" onclick="closeShop()" onmouseover="closeShop(), closeAll()">Inspiration</a></li>
+                  <li><a href="#"  onclick="closeShop()" onmouseover="closeShop(), closeAll()">Tribe</a></li>
+                  
+              
+              </ul>
+  
+              <form class="search-bar">
+                  <input type="search" class="search" name="search" placeholder="Search for products">
+                  <button type="submit" class="btn"><img  src="{{ url_for('static', filename = 'img/iconfinder_icon-111-search_314807.svg')}}" width="16px" height="16px" alt="image"></button>
+              </form>
+  
+              <div class="icona">
+                  <a href="#"><img class="icons" src="{{ url_for('static', filename = 'img/account.svg')}}" width="20px" height="20px" alt="image"></a>
+                  <a href="#"><img class="icons" src="{{ url_for('static', filename = 'img/contact.svg')}}" width="20px" height="20px" alt="image"></a>
+                  <a href="#"><img class="icons" src="{{ url_for('static', filename = 'img/shopping.svg')}}" width="18px" height="18px" alt="image"></a>
+              </div>
+  
+          </div>
+          <div id="shopid" class="shop">
+              <div class="shop-content">
+                  <a href="#" class="link" onclick="openSofa()" onmouseover="openSofa()">Sofas</a>
+                  <a href="#" class="link" onclick="openCoffee()" onmouseover="openCoffee()">Coffee Tables</a>
+                  <a href="#" class="link" onclick="openChair()" onmouseover="openChair()">Chairs</a>
+                  <a href="#" class="link" onclick="openTable()" onmouseover="openTable()">Tables</a>
+                  <a href="#" class="link" onclick="openSide()" onmouseover="openSide()">Side Tables</a>
+                  <a href="#" class="link" onclick="openConsole()" onmouseover="openConsole()">Consoles</a>
+                  <a href="#" class="link" onclick="openBar()" onmouseover="openBar()">Bar Stools</a>
+                  
+              </div>
+            
+          </div>
+  
+          <div id="sofaid" class="sofa">
+  
+              <div class="newblock1">
+                  <h5>By Size</h5>
+                  <a href="#" class="lines">1 Seater Sofas</a><br><br>
+                  <a href="#" class="lines">2 Seater Sofas</a><br><br>
+                  <a href="#" class="lines">3 Seater Sofas</a><br><br>
+                  <a href="#"class="lines" >L Shaped</a><br><br>
+                  <a href="#" class="lines">Love Seat</a><br><br>
+                  <a href="#" class="lines">Single Sofas</a><br><br>
+                  <a href="#" class="lines">Corner</a><br><br>
+  
+              
+              </div>
+                        
+              <div class="newblock">
+                  <h5>By Name</h5>
+                  <a href="#" class="lines" onclick="ada()" onmouseover="ada()">Ada Sofa</a><br><br>
+                  <a href="#" class="lines" onmouseover="alausa()">Alausa</a><br><br>
+                  <a href="#"class="lines" onmouseover="amakisi()">Amakisi Duo</a><br><br>
+                  <a href="#" class="lines" onmouseover="amara()">Amara Sofa</a><br><br>
+                  <a href="#" class="lines" onmouseover="amara()">Aramide Sofa</a><br><br>
+                  
+  
+  
+              
+              </div>
+  
+              <div class="newblock">
+                  <h5>By Name</h5>
+                  <a href="#" class="lines" onmouseover="efe()">Efe Sofa</a><br><br>
+                  <a href="#" class="lines" onmouseover="esosa()">Esosa Sofa</a><br><br>
+                  <a href="#" class="lines" onmouseover="ezinne()">Ezinne Sofa</a><br><br>
+                  <a href="#"class="lines" onmouseover="kare()">Kare Sofa</a><br><br>
+                  <a href="#" class="lines" onmouseover="kesandu()">Kesandu Sofa</a><br><br>
+                  
+              </div>
+              <div class="newblock">
+                  <h5>By Name</h5>
+                  <a href="#" class="lines" onmouseover="longi()">Longi Sofa</a><br><br>
+                  <a href="#" class="lines" onmouseover="nkem()">Nkem Sofa</a><br><br>
+                  <a href="#" class="lines" onmouseover="obi()">Obi Sofa</a><br><br>
+                  <a href="#"class="lines" onmouseover="osho()">Osho Sofa</a><br><br>
+                  <a href="#" class="lines" onmouseover="tunde()">Tunde Sofa</a><br><br>
+                
+              </div>
+                  
+              <div class="imgblock">
+                  <img id="slider" src="{{ url_for('static', filename = 'img/alausa/Alausa 2.jpg')}}" width="250px" height="auto" class="img" alt="image">
+                
+              </div>
+              
+                
+            
+          </div>
+      </div>
+  
+      <!--Coffee Table-->
+  
+      <div id="coffeeid" class="coffee">        
+          <div class="newblock1">
+              <h5>By Name</h5>
+              <a href="#" class="lines" onmouseover="efe1()">Efe</a><br><br>
+              <a href="#" class="lines" onmouseover="esosa1()">Esosa</a><br><br>
+              <a href="#"class="lines" onmouseover="kareem1()">Kareem</a><br><br>
+              <a href="#" class="lines" onmouseover="mensah1()">Mensah</a><br><br>        
+          </div>
+  
+  
+          <div class="imgblock1">
+              <img id="slider1" src="{{ url_for('static', filename = 'img/Shop/coffee.jpg')}}" width="250px" height="auto" class="img" alt="image">
+            
+          </div>  
+      </div>
+  
+      <!--Chair-->
+      
+  
+      <div id="chairid" class="chair">        
+          <div class="newblock1">
+              <h5>By Name</h5>
+              <a href="#" class="lines" onmouseover="bimbo2()">Bimbo</a><br><br>
+              <a href="#" class="lines" onmouseover="chimson2()">Chimson</a><br><br>
+              <a href="#"class="lines" onmouseover="fela2()">Fela</a><br><br>
+              <a href="#" class="lines" onmouseover="femi2()">Femi</a><br><br>
+              <a href="#" class="lines" onmouseover="ikenga2()">Ikenga</a><br><br>
+              <a href="#"class="lines" onmouseover="shobo2()">Shobo</a><br><br>
+              <a href="#" class="lines" onmouseover="taziya2()">Taziya</a><br><br>                
+          </div>
+  
+  
+          <div class="imgblock1">
+              <img id="slider2" src="{{ url_for('static', filename = 'img/Shop/chair.jpg')}}" width="250px" height="auto" class="img" alt="image">
+            
+          </div>  
+      </div>
+  
+      
+  
+      <div id="tableid" class="table">        
+          <div class="newblock1">
+              <h5>By Name</h5>
+              <a href="#" class="lines" onmouseover="aliko3()">Aliko</a><br><br>
+              <a href="#" class="lines" onmouseover="amakisi3()">Amakisi</a><br><br>
+              <a href="#"class="lines" onmouseover="andy3()">Andy</a><br><br>
+              <a href="#" class="lines" onmouseover="ath3()">Ath</a><br><br>
+              <a href="#" class="lines" onmouseover="aziza3()">Aziza</a><br><br>
+              <a href="#" class="lines" onmouseover="muna3()">Muna</a><br><br>
+              <a href="#"class="lines" onmouseover="ngozi3()">Ngozi</a><br><br>        
+          </div>
+  
+  
+          <div class="imgblock1">
+              <img id="slider3" src="{{ url_for('static', filename = 'img/Tables/Aliko table 2.jpg')}}" width="250px" height="auto" class="img" alt="image">
+            
+          </div>  
+      </div>
+  
+
+      
+
+      <div id="sideid" class="side">        
+          <div class="newblock1">
+              <h5>By Name</h5>
+              <a href="#" class="lines" onmouseover="randle()">Randle Side Tables</a><br><br>        
+          </div>
+  
+  
+          <div class="imgblock1">
+              <img id="slider4" src="{{ url_for('static', filename = 'img/Side tables/Randle side table 1.jpg')}}" width="250px" height="auto" class="img" alt="image">
+            
+          </div>  
+      </div>
+
+      
+  
+      <div id="consoleid" class="console">        
+          <div class="newblock1">
+              <h5>By Name</h5>
+              <a href="#" class="lines" onmouseover="akin5()">Akin TV Console</a><br><br>
+              <a href="#" class="lines" onmouseover="esoro5()">Esoro Console</a><br><br>
+              <a href="#"class="lines" onmouseover="kilema5()">Kilema Console</a><br><br>
+              <a href="#" class="lines" onmouseover="longi5()">Longi TV Console</a><br><br>        
+          </div>
+  
+  
+          <div class="imgblock1">
+              <img id="slider5" src="{{ url_for('static', filename = 'img/Consoles/Akin tv console 1 - website.jpg')}}" width="250px" height="auto" class="img" alt="image">
+            
+          </div>  
+      </div>
+
+      
+  
+      <div id="barid" class="bar">        
+          <div class="newblock1">
+              <h5>By Name</h5>
+                <a href="#" class="lines" onmouseover="bala()">Balarabe Barstool</a><br><br>
+                <a href="#" class="lines" onmouseover="gamba()">Gamba Barstool</a><br><br>
+                <a href="#"class="lines" onmouseover="izu()">Izu Barstool</a><br><br>
+                <a href="#" class="lines" onmouseover="kubrah()">Kubrah Barstool</a><br><br>
+                <a href="#" class="lines" onmouseover="mast()">Mast Barstool</a><br><br>
+                <a href="#"class="lines" onmouseover="sule()">Sule Barstool</a><br><br>
+                <a href="#" class="lines" onmouseover="zigi()">Zigi Barstool</a><br><br>       
+          </div>
+  
+  
+          <div class="imgblock1">
+              <img id="slider6" src="{{ url_for('static', filename = 'img/Barstools/Balarabe 4 - website.jpg')}}" width="250px" height="auto" class="img" alt="image">
+            
+          </div>  
+      </div>
+  
+  
+  </header>
+  <br>
+  
+  <div class="sm">
+        <!-- The overlay -->
+        <div id="myNav" class="overlay">
+  
+                  <!-- Button to close the overlay navigation -->
+                  <a id="cancel" href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    
+                  <!-- Overlay content -->
+                  <div>
+                      <div class="overlay-content">
+                              <a class="overlay-content1" href="javascript:void(0)" onclick="openShopmb()" onmouseover="openShopmb()">Shop</a>
+                              <a class="overlay-content2" href="javascript:void(0)" onclick="closeShopmb()" onmouseover="closeShopmb()">Inspiration</a>
+                              <a class="overlay-content3" href="javascript:void(0)" onclick="closeShopmb()"  onmouseover="closeShopmb()">Tribe</a>                 
+                      </div>
+  
+                  </div>
+  
+                  <div>
+                      <div id="shopidmb" class="shopmb">
+                          <div class="shop-contentmb">
+                              <a href="javascript:void(0)" class="linkmb" onclick="closeNav(), openNav1()"><img src="{{ url_for('static', filename = 'img/new.png')}}"  class="shopmbitem" > New <span class="forward">&#10095;</span></a>
+                              <a href="javascript:void(0)" class="linkmb" onclick="closeNav(), openNav2()"><img src="{{ url_for('static', filename = 'img/Shop/sofa.jpg')}}"  class="shopmbitem" > Sofas <span class="forward">&#10095;</span></a>
+                              <a href="javascript:void(0)" class="linkmb" onclick="closeNav(), openNav3()"><img src="{{ url_for('static', filename = 'img/Shop/coffee.jpg')}}"  class="shopmbitem" > Coffee Tables <span class="forward">&#10095;</span></a>
+                              <a href="javascript:void(0)" class="linkmb" onclick="closeNav(), openNav4()"><img src="{{ url_for('static', filename = 'img/Shop/chair.jpg')}}"  class="shopmbitem" > Chairs <span class="forward">&#10095;</span></a>
+                              <a href="javascript:void(0)" class="linkmb" onclick="closeNav(), openNav5()"><img src="{{ url_for('static', filename = 'img/Shop/table.jpg')}}"  class="shopmbitem" > Tables <span class="forward">&#10095;</span></a>
+                              <a href="javascript:void(0)" class="linkmb" onclick="closeNav(), openNav6()"><img src="{{ url_for('static', filename = 'img/Shop/side.jpg')}}"  class="shopmbitem" > Side Tables <span class="forward">&#10095;</span></a>
+                              <a href="javascript:void(0)" class="linkmb" onclick="closeNav(), openNav7()"><img src="{{ url_for('static', filename = 'img/Shop/console.jpg')}}"  class="shopmbitem" > Consoles <span class="forward">&#10095;</span></a>
+                              <a href="javascript:void(0)" class="linkmb" onclick="closeNav(), openNav8()"><img src="{{ url_for('static', filename = 'img/Shop/bar.jpg')}}"  class="shopmbitem" > Bar Stools <span class="forward">&#10095;</span></a>
+                              
+                          </div>
+                        
+                      </div>
+                  </div>
+
+                  <div id="nav-bottom" class="nav-bottom">
+                    <div class="nav-bottom-item">
+                        <a href="#"><img src="{{ url_for('static', filename = 'img/phone.svg')}}" alt="image"></a>
+                        <span class="nbi">Call</span>
+                    </div>
+
+                    <div class="nav-bottom-item">
+                        <a href="#"><img src="{{ url_for('static', filename = 'img/email.svg')}}" alt="image"></a>
+                        <span class="nbi">Contact</span>
+                    </div>
+
+                    <div class="nav-bottom-item">
+                        <a href="#"><img src="{{ url_for('static', filename = 'img/alert-circle.svg')}}" alt="image"></a>
+                        <span class="nbi">Store info</span>
+                    </div>
+
+                    <div class="nav-bottom-item">
+                        <a href="#"><img src="{{ url_for('static', filename = 'img/google-maps.svg')}}" alt="image"></a>
+                        <span class="nbi">Directions</span>
+                    </div>
+                    
+                  </div>
+    
+                </div>
+
+
+
+
+                <div id="myNav1" class="overlay1">       
+                  <a id="cancel1" href="javascript:void(0)" class="backbtn" onclick="closeNav1(), openNav()">&#10094; <span class="mnu">Menu</span></a>
+                  <div >
+                    <img class="prd-img" src="{{ url_for('static', filename = 'img/Shop/Scene 2.png')}}" alt="image">
+                    <div  class="laycontent">
+                        <a href="#" class="laycontentmb" onclick="closeNav1()">New in Sofas</a>
+                        <a href="#" class="laycontentmb" onclick="closeNav1()">New in Coffee Tables</a>
+                        <a href="#" class="laycontentmb" onclick="closeNav1()">New in Chairs</a>
+                        <a href="#" class="laycontentmb" onclick="closeNav1()">New in Tables</a>
+                        <a href="#" class="laycontentmb" onclick="closeNav1()">New in Side Tables</a>
+                        <a href="#" class="laycontentmb" onclick="closeNav1()">New in Consoles</a>
+                        <a href="#" class="laycontentmb" onclick="closeNav1()">New in Bar Stools</a>
+                    </div>
+                  </div>
+                  <span class="nav-title">New</span>
+
+                </div>
+
+                <div id="myNav2" class="overlay2">       
+                  <a id="cancel2" href="javascript:void(0)" class="backbtn" onclick="closeNav2(), openNav()">&#10094; <span class="mnu">Menu</span></a>
+                  <div >
+                    <img class="prd-img" src="{{ url_for('static', filename = 'img/Shop/Amara.png')}}" alt="image">
+                    <div  class="laycontent">
+                        <a href="#" class="laycontentmb" onclick="closeNav2()"><h3>By Size</h3></a>
+                        <a href="#" class="laycontentmb" onclick="closeNav2()">1 Seater Sofas</a>
+                        <a href="#" class="laycontentmb" onclick="closeNav2()">2 Seater Sofas</a>
+                        <a href="#" class="laycontentmb" onclick="closeNav2()">3 Seater Sofas</a>                        
+                        <a href="#" class="laycontentmb" onclick="closeNav2()">L Shaped</a>
+                        <a href="#" class="laycontentmb" onclick="closeNav2()">Love Seat</a>                        
+                        <a href="#" class="laycontentmb" onclick="closeNav2()">Single Sofas</a>
+                        <a href="#" class="laycontentmb" onclick="closeNav2()">Corner</a><br>
+
+                        <a href="#" class="laycontentmb" onclick="closeNav2()"><h3>By Name</h3></a>
+                        <a href="#" class="laycontentmb" onclick="closeNav2()">Ada Sofa</a>
+                        <a href="#" class="laycontentmb" onclick="closeNav2()">Alausa </a>
+                        <a href="#" class="laycontentmb" onclick="closeNav2()">Amakisi Duo</a>
+                        <a href="#" class="laycontentmb" onclick="closeNav2()">Amara Sofa</a>
+                        <a href="#" class="laycontentmb" onclick="closeNav2()">Aramide Sofa</a>
+                        <a href="#" class="laycontentmb" onclick="closeNav2()">Efe Sofa</a>
+                        <a href="#" class="laycontentmb" onclick="closeNav2()">Esosa Sofa</a>
+                        <a href="#" class="laycontentmb" onclick="closeNav2()">Ezinne Sofa</a>
+                        <a href="#" class="laycontentmb" onclick="closeNav2()">Kare Sofa</a>
+                        <a href="#" class="laycontentmb" onclick="closeNav2()">Kesandu Sofa</a>
+                        <a href="#" class="laycontentmb" onclick="closeNav2()">Longi Sofa</a>
+                        <a href="#" class="laycontentmb" onclick="closeNav2()">Nkem Sofa</a>
+                        <a href="#" class="laycontentmb" onclick="closeNav2()">Obi Sofa</a>
+                        <a href="#" class="laycontentmb" onclick="closeNav2()">Osho Sofa</a>
+                        <a href="#" class="laycontentmb" onclick="closeNav2()">Tunde Sofa</a>
+                    </div>
+
+                  </div>
+                  <span class="nav-title">Sofas</span>
+                </div>
+
+                <div id="myNav3" class="overlay3">       
+                  <a id="cancel3" href="javascript:void(0)" class="backbtn" onclick="closeNav3(), openNav()">&#10094; <span class="mnu">Menu</span></a>
+                  <div >
+                    <img class="prd-img" src="{{ url_for('static', filename = 'img/Shop/Efe 2.jpg')}}" alt="image">
+                    <div  class="laycontent">
+                        <a href="#" class="laycontentmb" onclick="closeNav3()">Efe Coffee Table</a>
+                        <a href="#" class="laycontentmb" onclick="closeNav3()">Esosa Coffee Table</a>
+                        <a href="#" class="laycontentmb" onclick="closeNav3()">Kareem Coffee Table</a>
+                        <a href="#" class="laycontentmb" onclick="closeNav3()">Mensah Coffee Table</a>
+                    </div>
+
+                  </div>
+                  <span class="nav-title">Coffee Tables</span>
+                </div>
+
+                <div id="myNav4" class="overlay4">       
+                  <a id="cancel4" href="javascript:void(0)" class="backbtn" onclick="closeNav4(), openNav()">&#10094; <span class="mnu">Menu</span></a>
+                  <div >
+                    <img class="prd-img" src="{{ url_for('static', filename = 'img/Shop/Bimbo 3.jpg')}}" alt="image">
+                    <div  class="laycontent">
+                        <a href="#" class="laycontentmb" onclick="closeNav4()">Bimbo Chair</a>
+                        <a href="#" class="laycontentmb" onclick="closeNav4()">Chimson Chair</a>
+                        <a href="#" class="laycontentmb" onclick="closeNav4()">Fela Chair</a>
+                        <a href="#" class="laycontentmb" onclick="closeNav4()">Femi Chair</a>
+                        <a href="#" class="laycontentmb" onclick="closeNav4()">Ikenga Chair</a>
+                        <a href="#" class="laycontentmb" onclick="closeNav4()">Shobo Chair</a>
+                        <a href="#" class="laycontentmb" onclick="closeNav4()">Taziya Chair</a>
+                    </div>
+
+                  </div>
+                  <span class="nav-title">Chairs</span>
+                </div>
+
+                <div id="myNav5" class="overlay5">       
+                  <a id="cancel5" href="javascript:void(0)" class="backbtn" onclick="closeNav5(), openNav()">&#10094; <span class="mnu">Menu</span></a>
+                  <div >
+                    <img class="prd-img" src="{{ url_for('static', filename = 'img/Shop/Table 2 - original.png')}}" alt="image">
+                    <div  class="laycontent">
+                        <a href="#" class="laycontentmb" onclick="closeNav5()">Aliko Table</a>
+                        <a href="#" class="laycontentmb" onclick="closeNav5()">Amakisi Table</a>
+                        <a href="#" class="laycontentmb" onclick="closeNav5()">Andy Table</a>
+                        <a href="#" class="laycontentmb" onclick="closeNav5()">Ath Table</a>
+                        <a href="#" class="laycontentmb" onclick="closeNav5()">Aziza</a>
+                        <a href="#" class="laycontentmb" onclick="closeNav5()">Muna</a>
+                        <a href="#" class="laycontentmb" onclick="closeNav5()">Ngozi</a>
+                    </div>
+
+                  </div>
+                  <span class="nav-title">Tables</span>
+                </div>
+
+                <div id="myNav6" class="overlay6">       
+                  <a id="cancel6" href="javascript:void(0)" class="backbtn" onclick="closeNav6(), openNav()">&#10094; <span class="mnu">Menu</span></a>
+                  <div >
+                    <img class="prd-img" src="{{ url_for('static', filename = 'img/Shop/Randle side table 1.jpg')}}" alt="image">
+                    <div  class="laycontent">
+                        <a href="#" class="laycontentmb" onclick="closeNav6()">Randle Side Table</a>
+                    </div>
+
+                  </div>
+                  <span class="nav-title">Side Tables</span>
+                </div>
+
+                <div id="myNav7" class="overlay7">       
+                  <a id="cancel7" href="javascript:void(0)" class="backbtn" onclick="closeNav7(), openNav()">&#10094; <span class="mnu">Menu</span></a>
+                  <div >
+                    <img class="prd-img" src="{{ url_for('static', filename = 'img/Shop/Akin tv console 1 - website.jpg')}}" alt="image">
+                    <div  class="laycontent">
+                        <a href="#" class="laycontentmb" onclick="closeNav7()">Akin TV Console</a>
+                        <a href="#" class="laycontentmb" onclick="closeNav7()">Esoro TV Console</a>
+                        <a href="#" class="laycontentmb" onclick="closeNav7()">Kilema TV Console</a>
+                        <a href="#" class="laycontentmb" onclick="closeNav7()">Longi TV Console</a>
+                    </div>
+
+                  </div>
+                  <span class="nav-title">Consoles</span>
+                </div>
+
+                <div id="myNav8" class="overlay8">       
+                  <a id="cancel8" href="javascript:void(0)" class="backbtn" onclick="closeNav8(), openNav()">&#10094; <span class="mnu">Menu</span></a>
+                  <div >
+                    <img class="prd-img" src="{{ url_for('static', filename = 'img/Shop/Balarabe 4 - website.jpg')}}" alt="image">
+                    <div  class="laycontent">
+                        <a href="#" class="laycontentmb" onclick="closeNav8()">Balarabe Barstool</a>
+                        <a href="#" class="laycontentmb" onclick="closeNav8()">Gamba Barstool</a>
+                        <a href="#" class="laycontentmb" onclick="closeNav8()">Izu Barstool</a>
+                        <a href="#" class="laycontentmb" onclick="closeNav8()">Kubrah Barstool</a>
+                        <a href="#" class="laycontentmb" onclick="closeNav8()">Mast Barstool</a>
+                        <a href="#" class="laycontentmb" onclick="closeNav8()">Sule Barstool</a>
+                        <a href="#" class="laycontentmb" onclick="closeNav8()">Zigi Barstool</a>
+                    </div>
+
+                  </div>
+                  <div class="nav-title">Bar Stools</div>
+                </div>
+
+
+
+    
+                <!-- Use any element to open/show the overlay navigation menu -->
+                
+                <a href="javascript:void(0)"><p class="menu"  onclick="openNav(), openShopmb()"> &#8285; </p></a>
+                <a href="#"><img class="logo" src="{{ url_for('static', filename = 'img/taeillo.jpg')}}" alt="image"></a>
+                <div class="icon1">
+                  <a href="#"><img class="icon3" src="{{ url_for('static', filename = 'img/account.svg')}}" width="20px" height="20px" alt="image"></a>
+                  <a href="#"><img class="icon3" src="{{ url_for('static', filename = 'img/contact.svg')}}" width="20px" height="20px" alt="image"></a>
+                  <a href="#"><img class="icon3" src="{{ url_for('static', filename = 'img/shopping.svg')}}" width="18px" height="18px" alt="image"></a>
+              </div>
+          
+  </div>
+  
+  <form class="search-bar">
+      <input type="search" class="search" name="search" placeholder="Search for products">
+      <button type="submit" class="btn"><img  src="{{ url_for('static', filename = 'img/iconfinder_icon-111-search_314807.svg')}}" width="16px" height="16px" alt="image"></button>
+  </form>
+
+
+    {% block body %}
+
+    {% endblock body %}
+
+    <footer class="footer" onclick="closeAll()" onmouseover="closeAll()">
+
+      <div class="footer-lg">
+          <div class="footer-content">
+              <a href="#" class="content-header"> About Us</a>
+              <a href="#" class="content">Our Company</a>
+              <a href="#" class="content">Our Designers</a>
+              <a href="#" class="content">Customer Reviews</a>
+              <a href="#" class="content">TV Advert</a>
+              <a href="#" class="content">Career</a>
+              <a href="#" class="content">Sales</a>
+  
+          </div>
+          <div class="footer-content">
+              <a href="#" class="content-header">How we can help you</a>
+              <a href="#"  class="content">Tracking Orders</a>
+              <a href="#"  class="content">Deliveries</a>
+              <a href="#"  class="content">Help & FAQs</a>
+              <a href="#"  class="content">Returns & Refunds</a>
+              <a href="#"  class="content">Affiliates</a>
+              <a href="#"  class="content">Furniture Financing</a>
+          </div>
+          <div class="footer-content">
+              <a href="#" class="content-header">Show by style</a>
+              <a href="#"  class="content">Inspiration</a>
+              <a href="#"  class="content">Talent LAB</a>
+              <a href="#"  class="content">Taiello Vouchers</a>
+              <a href="#"  class="content">Visit Our Show Room</a>
+          </div>
+          <div class="footer-content">
+              <a href="#" class="content-header">Show by room</a>
+              <a href="#"  class="content">Living Room Funiture</a>
+              <a href="#"  class="content">Dining Room Furniture</a>
+              <a href="#"  class="content">Bathroom Furniture</a>
+              <a href="#"  class="content">Bedroom Furniture</a>
+              <a href="#"  class="content">Office Furniture</a>
+              <a href="#"  class="content">Furniture</a>
+          </div>
+          <div class="footer-content">
+              <a href="#" class="content-header">Contact Us</a>
+              <a href="#" class="content">Facebook</a>
+              <a href="#" class="content">Twitter</a>
+              <a href="#" class="content">Instagram</a>
+              <a href="#" class="content">Whatsapp</a>
+              <a href="#" class="content">Email</a>
+          </div>
+          <div class="footer-content">
+              <img src="{{ url_for('static', filename = 'img/taeillo1.png')}}" width="50px" height="auto" alt="image" class="img-bottom">
+          </div>
+          
+      </div>
+  
+      <div class="hr">
+          <hr>
+      </div>
+      
+      <div class="footer-lg2">
+          <div class="footer-content1">
+              <div class="footer-content">
+                  <a href="#" class="content1">Terms and conditions</a>
+              </div>
+              <div class="footer-content">
+                  <a href="#" class="content1">Cookies and privacy policy</a>
+              </div>
+              <div class="footer-content">
+                  <a href="#" class="content1">Sitemap</a>
+              </div>
+          </div>
+  
+          <div class="footer-content">
+              <div class="footer-content">
+                  <p class="contact">Registered number: 0703 216 8811 | Registered office: 4B, Oyeleke street Ikeja, 100001, Lagos</p>
+              </div>
+          </div>
+  
+      </div>
+  
+      <div class="footer-mb">
+          <div  class="footermb-content">
+              <p class="contentmb-header" onclick="openOne(), closeTwo(), closeThree(), closeFour(), closeFive()"> About Us</p>
+              <a href="#" id="one" class="contentmb">Our Company</a>
+              <a href="#" id="one1" class="contentmb">Our Designers</a>
+              <a href="#" id="one2" class="contentmb">Customer Reviews</a>
+              <a href="#" id="one3" class="contentmb">TV Advert</a>
+              <a href="#" id="one4" class="contentmb">Career</a>
+              <a href="#" id="one5" class="contentmb">Sales</a>
+  
+          </div>
+          <div  class="footermb-content">
+              <p class="contentmb-header"  onclick="openTwo(), closeOne(), closeThree(), closeFour(), closeFive()">How can we help you</p>
+              <a href="#" id="two" class="contentmb">Tracking Orders</a>
+              <a href="#" id="two1" class="contentmb">Deliveries</a>
+              <a href="#" id="two2" class="contentmb">Help & FAQs</a>
+              <a href="#" id="two3" class="contentmb">Returns & Refunds</a>
+              <a href="#" id="two4" class="contentmb">Affiliates</a>
+              <a href="#" id="two5" class="contentmb">Furniture Financing</a>
+          </div>
+          <div  class="footermb-content">
+              <p class="contentmb-header" onclick="closeOne(), closeTwo(), openThree(), closeFour(), closeFive()">Show by style</p>
+              <a href="#" id="three" class="contentmb">Inspiration</a>
+              <a href="#" id="three1" class="contentmb">Talent LAB</a>
+              <a href="#" id="three2" class="contentmb">Taiello Vouchers</a>
+              <a href="#" id="three3" class="contentmb">Visit Our Show Room</a>
+             
+          </div>
+          <div  class="footermb-content">
+              <p class="contentmb-header" onclick="closeOne(), closeTwo(), closeThree(), openFour(), closeFive()">Show by room</p>
+              <a href="#" id="four" class="contentmb">Living Room Funiture</a>
+              <a href="#" id="four1" class="contentmb">Dining Room Furniture</a>
+              <a href="#" id="four2" class="contentmb">Bathroom Furniture</a>
+              <a href="#" id="four3" class="contentmb">Bedroom Furniture</a>
+              <a href="#" id="four4" class="contentmb">Office Furniture</a>
+              <a href="#" id="four5" class="contentmb">Furniture</a>
+          </div>
+          <div class="footermb-content">
+              <p class="contentmb-header" onclick="closeOne(), closeTwo(), closeThree(), closeFour(), openFive()">Contact Us</p>
+              <a href="#" id= "five"  class="contentmb">Facebook</a>
+              <a href="#" id= "five1"  class="contentmb">Twitter</a>
+              <a href="#" id= "five2"  class="contentmb">Instagram</a>
+              <a href="#" id= "five3"  class="contentmb">Whatsapp</a>
+              <a href="#" id= "five4"  class="contentmb">Email</a>
+              
+          </div>
+          <div class="footer-content2">
+              <img src="{{ url_for('static', filename = 'img/taeillo1.png')}}" alt="image" width="27%"><br><br>
+          </div>
+          
+      </div>
+  
+      </div>
+  
+  </footer>  
+  
+    
+    <script type="text/javascript">
+      if ("serviceWorker" in navigator) {
+          window.addEventListener("load", () => {
+          navigator.serviceWorker
+              .register("static/javascript/sw.js")
+              .then((registration) => {
+                console.log(`Yay! ServiceWorker is loaded `)
+              })
+              .catch((err) => {
+                console.log(`Boo! ServiceWorker didn't load: ${err}`);
+              });
+          });
+      }
+    </script>
+    <script rel="javascript" type= "text/javascript" src="{{ url_for('static', filename = 'javascript/index.js')}}"></script>
+    
+    
+    
+  </body>
+{% endblock html %}
+</html>
