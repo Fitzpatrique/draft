@@ -1,0 +1,1214 @@
+body{
+    font-family: 'Bitter', serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: small;
+    color: black;
+
+}
+
+h5{
+  display: flex;
+  width: 200%;
+}
+ 
+h4{
+  text-align: justify;
+  font-weight: 400;
+  line-height: 1.5em;
+  font-size: small;
+}
+
+
+
+a{
+    text-decoration: none;
+    color: #707070;
+    
+}
+
+a:hover, a:focus{
+    color: #231f20;
+}
+
+ul {
+    position: relative;
+    padding: 0;
+    white-space: nowrap;
+    margin-top: 1.5em;
+    font-size: small;
+  }
+
+ul li {
+    display: inline;
+    text-align: center;
+   margin-left: 2em;
+}
+
+ul li a{
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: inline-block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0.4em 0;
+  color: #231f20;
+  text-decoration: none;
+  text-shadow: none;
+
+
+  
+  -webkit-transition: width .3s,right .3s;
+  -moz-transition: width .3s,right .3s;
+  -o-transition: width .3s,right .3s;
+  transition: width .3s,right .3s;
+}
+
+ul li:nth-child(1) a { width: 4em; margin: 0 0 0 0; position: absolute; left: 0;}
+ul li:nth-child(2) a { width: 9em; }
+ul li:nth-child(3) a { width: 4em;}
+
+
+ul li:last-child a::after {
+    content: "";
+    position: absolute;
+    right: inherit;
+    bottom: -3px;
+    width: inherit;
+    height: 3px;
+    background: transparent;
+    pointer-events: none;
+    
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+  }
+
+
+  
+  ul li:nth-child(2):hover ~ li:last-child a {
+    right: 7.4em;
+    width: 7em;
+    
+  }
+  
+  ul li:nth-child(1):hover ~ li:last-child a {
+    right: 17em;
+    width: 4em;
+  }
+
+
+
+  ul li:hover ~ li:last-child a::after,
+  ul li:last-child:hover a::after { background: #fdbe0e; }
+  
+  ul li:last-child a {
+    margin: 0;
+    min-width: 4.1em;
+    max-width: 4.1em;
+  }
+
+ul li a:hover,
+ul li a:focus{
+    color: #fdbe0e;
+      
+  -webkit-transition: width .2s,right .2s,background-color .2s;
+  -moz-transition: width .2s,right .2s,background-color .2s;
+  -o-transition: width .2s,right .2s,background-color .2s;
+  transition: width .2s,right .2s,background-color .2s;
+    
+}
+
+ul li a:focus { border-bottom: 3px solid #fdbe0e; }
+
+
+.search{
+  width: 250px;
+  height: 2em;
+  margin-top: 1.5em;
+  margin-left: 2.6rem;
+  
+  border: none;
+  background-color: #eaeaea;
+  border-radius: 4px;
+  text-align: center;
+  margin-right: 0;
+}
+
+.btn{
+  display: flex;
+  margin-top: -1.7em;
+  margin-left: 2.7rem;
+}
+
+.header{
+    width: 100%;
+    background-color: #fff;
+    color: #231f20;
+    display: flex;
+    position: fixed;
+    margin-top: 33px;
+    
+}
+
+.logo-image{
+    width: 70px;
+    height: auto;
+    margin: 1.2em 0 0 2.5rem;
+    padding-right: 4em;
+    
+}
+
+.icons{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5em;
+    padding: 0 1.1em;
+}
+
+.icona{
+  display: flex;
+  position: fixed;
+  right: 2%;
+  margin-top: 1.5em;
+}
+
+.ann{
+    display: flex;
+    position: fixed;
+    color: #fff;
+    background-color: #7b7b7b;
+    padding: 0.6rem;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+    font-size: small;
+}
+
+.nav{
+    margin-left: -2rem;
+}
+
+.shop{
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    color: #231f20;
+    width: 0;
+    height: 5%;
+    margin: 90px 50% 0 0;
+    padding-top: 1em;
+    padding-left: 3%;
+    background-color: #fff;
+}
+
+.sofa{
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  color: #231f20;
+  width: 0;
+  height: 50%;
+  margin: 130px 15% 0 0;
+  padding-left: 3%;
+  padding-right: 3%;
+  background-color: #fff;
+  box-shadow: 0 10px 12px rgba(27, 27, 27, 0.4);
+}
+
+.coffee{
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  color: #231f20;
+  width: 0;
+  height: 50%;
+  margin: 130px 15% 0 0;
+  padding-left: 3%;
+  padding-right: 3%;
+  background-color: #fff;
+  box-shadow: 0 10px 12px rgba(27, 27, 27, 0.4);
+}
+
+.chair{
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  color: #231f20;
+  width: 0;
+  height: 50%;
+  margin: 130px 15% 0 0;
+  padding-left: 3%;
+  padding-right: 3%;
+  background-color: #fff;
+  box-shadow: 0 10px 12px rgba(27, 27, 27, 0.4);
+}
+
+.table{
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  color: #231f20;
+  width: 0;
+  height: 50%;
+  margin: 130px 15% 0 0;
+  padding-left: 3%;
+  padding-right: 3%;
+  background-color: #fff;
+  box-shadow: 0 10px 12px rgba(27, 27, 27, 0.4);
+}
+
+.side{
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  color: #231f20;
+  width: 0;
+  height: 50%;
+  margin: 130px 15% 0 0;
+  padding-left: 3%;
+  padding-right: 3%;
+  background-color: #fff;
+  box-shadow: 0 10px 12px rgba(27, 27, 27, 0.4);
+}
+
+.console{
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  color: #231f20;
+  width: 0;
+  height: 50%;
+  margin: 130px 15% 0 0;
+  padding-left: 3%;
+  padding-right: 3%;
+  background-color: #fff;
+  box-shadow: 0 10px 12px rgba(27, 27, 27, 0.4);
+}
+
+
+.bar{
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  color: #231f20;
+  width: 0;
+  height: 50%;
+  margin: 130px 15% 0 0;
+  padding-left: 3%;
+  padding-right: 3%;
+  background-color: #fff;
+  box-shadow: 0 10px 12px rgba(27, 27, 27, 0.4);
+}
+
+.newblock1{
+  margin: 0 0 3em 0;
+  padding-right: 8em;
+  padding-top: 0;
+  text-align: left;
+  border-top: none;
+  padding-bottom: 3em;
+}
+
+.newblock{
+  margin: 0 0 3em 0;
+  padding-right: 4em;
+  padding-top: 0;
+  text-align: left;
+  border-top: none;
+}
+
+.imgblock{
+  margin: 1.2em 0 2em 0;
+  padding: 0; 
+  
+}
+
+.imgblock1{
+  margin: 1.2em 5em 2em 0;
+  padding: 0; 
+  
+}
+
+.link{
+  padding-right: 5em;
+}
+
+.lines{
+  padding-bottom: 150px;
+
+}
+
+.sm{
+  display: none;
+}
+
+.section-1{
+  position: relative;
+  z-index: 1;
+}
+
+.footer{
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 5% 3.5% 0 3%;
+  width: 93.5%;
+}
+
+.footer-lg{
+  display: flex;
+  justify-content: space-between;
+  font-size: small;
+  text-align: left;
+}
+
+.footer-lg2{
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-content{
+  margin: 0;
+  padding: 0 0 2% 0;
+  width: auto;
+  
+}
+
+.footer-content1{
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0 2em 0 0;
+  width: auto;
+  justify-content: space-between;
+  
+}
+
+.contact{
+  font-size: small;
+  color: #707070;
+}
+
+.content-header{
+  display: block;
+  margin: 0;
+  padding: 1.5em 0;
+  font-size: medium;
+  font-weight: bold;
+  color: black;
+}
+
+
+.img-bottom{
+  margin-top: -1em;
+  padding-left: 0;
+  width: 90%;
+  
+}
+
+.content{
+  display: block;
+  margin: 0 -50% 0 0;
+  padding: 1.5em 0 0 0;
+  font-size: small;
+  text-align: left;
+  width: fit-content;
+}
+
+.content1{
+  display: block;
+  margin: 0 1em 0 0;
+  padding: 1.5em 0 0 0;
+  font-size: small;
+  text-align: left;
+}
+
+.content:hover{
+  color: black;
+  border-bottom: 1px solid black;
+ 
+}
+
+.content1:hover{
+  color: black;
+  border-bottom: 1px solid black;
+}
+
+.footer-mb{
+  display: none;
+}
+
+.newsletter{
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(250, 227, 227);
+  padding: 3%;
+}
+
+.words{
+  text-align: left;
+  display: block;
+  width: 40%;
+  height: 50%;
+  text-align: justify;
+}
+
+.letter-box{
+  width: 45%;
+  padding-top: 3.5%;
+}
+
+.input-email{
+  width: 70%;
+  height: 3em;
+  border: 1px solid black;
+  background-color: transparent;
+  color: white;
+  text-align: center;
+}
+
+.input-email:focus, .btn1:focus{
+  border: none;
+}
+
+.btn1{
+  width: 20%;
+  height: 3.2em;
+  background-color: black;
+  color: white;
+  border: none;
+}
+
+.sayduck{
+ 
+  display: flex;
+  position: relative;
+  
+}
+
+#sayduck{
+  z-index: -1;
+}
+
+
+#content{
+  display:flex;
+}
+
+#shopid{
+  display: flex;
+  width: 97%;
+  transition-duration: 0.5s;
+}
+
+#sofaid{
+  display: none;
+  
+}
+
+#coffeeid{
+  display: none;
+  
+}
+
+#chairid{
+  display: none;
+  
+}
+
+#tableid{
+  display: none;
+  
+}
+
+#sideid{
+  display: none;
+  
+}
+
+#consoleid{
+  display: none;
+  
+}
+
+#barid{
+  display: none;
+  
+}
+
+/**************************************************************************
+
+
+
+
+*****************************************************************************/
+
+@media (max-width: 1020px){
+  body{
+    font-family: 'Bitter', serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: small;
+    color: black;
+  }
+
+  h5{
+    display: flex;
+    width: 200%;
+  }
+
+  .ann{
+    font-size: smaller;
+    color: #f5f5f5;
+    padding-bottom: 1.2em;
+  }
+
+  .search{
+      width: 90%;
+      height: 2em;
+      margin-top: 5.5em;
+      margin-left: 0;
+      margin-bottom: 1em;
+      border: none;
+      background-color: #eaeaea;
+      border-radius: 4px;
+      text-align: center;
+  }
+
+  .btn{
+      display: flex;
+      margin-top: -2.8em;
+      margin-left: 7%;
+      margin-bottom: 1em;
+  }
+
+
+  .header{
+      display: none;
+  }
+
+  .logo-image{
+      display: none;
+      
+  }
+
+  .icons{
+      display: none;
+      
+  }
+
+
+  .shop{
+      display: none;
+  }
+
+  .sofa{
+    display: none;
+  }
+
+  
+  .newblock{
+    display: none;
+  }
+
+  .imgblock{
+    display: none;
+  }
+
+
+
+  .link{
+    display: none;
+  }
+
+  .lines{
+    display: none;
+
+  }
+
+  .sm{
+    display: flex;
+    position: fixed;
+    width: 100%;
+  }
+
+  /* The Overlay (background) */
+	.overlay {
+	  /* Height & width depends on how you want to reveal the overlay (see JS below) */  
+	  display: flex; 
+    height: 100%;
+    box-shadow: 100px 0px 100000px rgba(27, 27, 27, 0.4);
+	  width: 0;
+	  position: fixed; /* Stay in place */
+    z-index: 10;
+	  left: 0;
+	  top: 0;
+	  background-color: #fff; /* Black w/opacity */
+    overflow-x: scroll;
+    overflow-y: scroll;
+	  transition: 0.25s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  }
+  
+
+
+	.overlay1, .overlay2, .overlay3, .overlay4, .overlay5, .overlay6, .overlay7, .overlay8 {
+	  /* Height & width depends on how you want to reveal the overlay (see JS below) */  
+	  display: flex; 
+    height: 100%;
+    box-shadow: 100px 0px 100000px black;
+	  width: 0;
+	  position: fixed; /* Stay in place */
+	  z-index: 10; /* Sit on top */
+	  left: 100%;
+	  top: 0;
+	  background-color: #fff; /* Black w/opacity */
+    overflow-x: hidden;
+    overflow-y: scroll;
+	  transition: 0.125s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+	}
+
+
+
+	/* Position the content inside the overlay */
+ .overlay-content1, .overlay-content2, .overlay-content3 {
+    font-size: 25px;
+    display: flex;
+	  position: absolute;
+	  top: 25px; /* 25% from the top */
+	  text-align: center; /* Centered text/links */
+    margin-top: 0; /* 30px top margin to avoid conflict with the close button on smaller screens */
+	}
+
+  .overlay-content1{
+    left: 5%;
+    top: 3em;
+  }
+
+  .overlay-content2{
+    left: 25%;
+    top: 3em;
+    
+  }
+
+  .overlay-content3{
+    left: 53%;
+    top: 3em;
+  }
+
+	/* The navigation links inside the overlay */
+	.overlay a {
+    
+	  padding: 0;
+	  text-decoration: none;
+	  font-size: small;
+    color: #1b1b1b;
+    font-weight: 500;
+	  display: block; /* Display block instead of inline */
+  
+  }
+  
+  .overlay-content1:focus, .overlay-content1:hover  { width: fit-content;   color: #fdbe0e;  border-bottom: 1px solid #fdbe0e;
+    padding-bottom: 2px;}
+  .overlay-content2:focus, .overlay-content2:hover { width: fit-content;   color: #fdbe0e;  border-bottom: 1px solid #fdbe0e;
+    padding-bottom: 2px;}
+  .overlay-content3:focus, .overlay-content3:hover { width: fit-content;  color: #fdbe0e;  border-bottom: 1px solid #fdbe0e;
+    padding-bottom: 2px;}
+
+	/* When you mouse over the navigation links, change their color */
+
+  
+ 
+	/* Position the close button (top right corner) */
+	.closebtn {
+	  position: absolute;
+	  top: 30px;
+	  right: 12%;
+    font-size: 30px;
+    font-weight: 600;
+  }
+
+  .backbtn {
+	  position: absolute;
+	  top: 30px;
+	  left: 5%;
+    font-size: 18px;
+    
+    color: #1b1b1b;
+  }
+  
+  .menu{
+    display: flex;
+    position: fixed;
+    font-size: 30px;
+    font-weight: 800;
+    margin: 0.63em 1em 0 0;
+    padding-left: 5%;
+    background-color: #fff;
+    width: 100%;
+    padding-bottom: 0.2em;
+    color: #1b1b1b;
+    
+  }
+
+  .logo{
+    display: flex;
+    position: fixed;
+    height: 36px;
+    width: auto;
+    margin: 1.6em 0 0 15%;
+  }
+
+  .icon1{
+    display: flex;
+    position: fixed;
+    right: 5%;
+    margin-top: 2.2em;
+  }
+
+
+
+  .icon3{
+    margin-top: 0;
+    padding-left: 0.8em;
+  }
+
+  .shopmb{
+    display: flex;
+    position: absolute;
+    left: 5%;
+    justify-content: space-between;
+    color: #231f20;
+    width: 0;
+    height: fit-content;
+    margin: 70px 0 0 0;
+    padding-bottom: 6em;
+    background-color: #fff;
+    overflow-y: scroll;
+  }
+
+  .shop-contentmb{
+    width: 90%;
+    overflow-y: scroll;
+    
+  }
+
+  .shopmbitem{
+    margin-bottom: -0.8em;
+    border-radius: 50%;
+    margin-right: 2em;
+    width: 35px;
+    height: auto;
+  }
+
+
+  .linkmb{
+    top: 0; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 0;
+    padding: fit-content;
+    text-align: left;
+  }
+
+  .shopmb a{
+    display: block;
+    border-bottom: 0.5px solid #e1e1e1;
+    padding: 1em 1em 1.5em 0.5em;
+    margin-left: 0;
+    width: 90%;
+    
+  }
+
+  .linkmb{
+    padding-right: 5em;
+  }
+
+  .footer-lg{
+    display: none;
+  }
+
+  .footer-lg2{
+    display: none;
+  }
+
+  .hr{
+    display: none;
+  }
+
+  .footer-mb{
+    display: block;
+    margin: 0 0 0 0;
+    padding:  0;
+    font-size: 14px;
+    text-align: left;
+    width: 100%;
+  }
+
+  .footermb-content{
+    display: block;
+    width: 100%;
+  }
+
+  .contentmb-header{
+    display: block;
+    color: black;
+    border-bottom: 1px solid #e1e1e1;
+    padding: 1em 1em 1em 0.5em;
+    margin-left: 0;
+    font-weight: 600;
+  }
+
+  .contentmb{
+    display: block;
+    border-bottom: 1px solid #e1e1e1;
+    padding: 1em 1em 1em 0.5em;
+    margin-left: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    z-index: 20;
+  }
+
+  .footer-content2{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1.7em;
+  }
+
+  .newsletter{
+    display: block;
+    background-color: rgb(250, 227, 227);
+    padding: 3%;
+  }
+
+  .words{
+    font-size: small;
+    line-height: 1.5em;
+    text-align: left;
+    display: block;
+    width: 92%;
+    height: 50%;
+    text-align: justify;
+    margin: 0 3%;
+  }
+
+  h4{
+    font-size: small;
+  }
+
+  .letter-box{
+    width: 100%;
+    padding-top: 3.5%;
+    padding-bottom: 5%;
+  }
+
+  .input-email{
+    width: 70%;
+    height: 3em;
+    border: 1px solid black;
+    background-color: transparent;
+    color: white;
+    text-align: center;
+  }
+
+  .input-email:focus, .btn1:focus{
+    border: none;
+  }
+
+  .btn1{
+    width: 20%;
+    height: 3.2em;
+    background-color: black;
+    color: white;
+    border: none;
+  }
+
+  .forward{
+    position: absolute;
+    padding: 0;
+    left: 80%;
+    margin-top: 3%;
+  }
+
+  .prd-img{
+    width: 100%;
+    height: auto;
+    margin-top: -20%;
+  }
+
+  .nav-title{
+    position: absolute;
+    left: 5%;
+    top: 39%;
+    font-size: x-large;
+    font-weight: 600;
+    color: #1d1d1d;
+  }
+
+  .nav-bottom{
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    color:#231f20;
+    margin: 0;
+    padding: 1em 0.1em;
+    justify-content: space-around;
+  }
+
+  .nav-bottom-item{
+    display: block;
+  }
+
+  .laycontent{
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin: 0;
+    padding: 1em 5%;
+    overflow-y: visible;
+    height: 100%;
+  }
+
+  .laycontentmb{
+    display: block;
+    width: 100%;
+    padding: 1.2em 0;
+    color: black;
+    overflow-y: visible;
+
+  }
+
+
+  #cancel1, #cancel2, #cancel3, #cancel4, #cancel5, #cancel6, #cancel7, #cancel8 {
+    font-size: 16px;
+    margin-top: 0;
+    
+    
+  }
+
+  #cancel{
+    font-size: 30px;
+    margin-top: 0;
+    font-weight: 700;
+
+  }
+
+  .mnu{
+    font-size: medium;
+    padding-left: 0.2em;
+    margin-left: 0.5em;
+  }
+
+
+  #content{
+    display:none;
+  }
+
+  #shopid{
+    display: none;
+  }
+
+
+  #sofaid{
+    display: none;
+    
+  }
+
+  #shopidmb{
+    display: none;
+    transition-duration: 0.1s;
+  }
+
+  #one, #one1, #one2, #one3, #one4, #one5{
+    display: none;
+    width: 100%;
+  }
+
+  #two, #two1, #two2, #two3, #two4, #two5{
+    display: none;
+    width: 100%;
+  }
+
+  #three, #three1, #three2, #three3{
+    display: none;
+    width: 100%;
+  }
+
+  #four, #four1, #four2, #four3, #four4, #four5{
+    display: none;
+    width: 100%;
+  }
+
+  #five, #five1, #five2, #five3, #five4{
+    display: none;
+    width: 100%;
+  }
+
+  #myNav1{
+    width: 0;
+  }
+
+  #myNav2{
+    width: 0;
+  }
+
+  #myNav3{
+    width: 0;
+  }
+
+  #myNav4{
+    width: 0;
+  }
+
+  #myNav5{
+    width: 0;
+  }
+
+  #myNav6{
+    width: 0;
+  }
+
+  #myNav7{
+    width: 0;
+  }
+
+  #myNav8{
+    width: 0;
+  }
+
+}
+
+@media (min-width: 270px) and (max-width: 290px){
+  .closebtn {
+	  position: absolute;
+	  top: 30px;
+	  right: 27%;
+    font-size: 30px;
+    font-weight: 600;
+  }
+
+  .nav-title{
+    position: absolute;
+    left: 5%;
+    top: 30%;
+    font-size: x-large;
+    font-weight: 600;
+    color: #1d1d1d;
+  }
+
+  .nav-bottom{
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    color: #231f20;
+    margin: 0;
+    padding: 1em 0.5em;
+    justify-content: space-around;
+  }
+}
+
+@media (min-width: 291px) and (max-width: 329px){
+  .closebtn {
+	  position: absolute;
+	  top: 30px;
+	  right: 12%;
+    font-size: 30px;
+    font-weight: 600;
+  }
+
+  .nav-title{
+    position: absolute;
+    left: 5%;
+    top: 40%;
+    font-size: x-large;
+    font-weight: 600;
+    color: #1d1d1d;
+  }
+
+  .nav-bottom{
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 90%;
+    background-color: white;
+    color: #231f20;
+    margin: 0;
+    padding: 1em 0.1em;
+    justify-content: space-around;
+  }
+}
+
+@media (max-height: 568px){
+  .nav-bottom{
+    position: fixed;
+    bottom: 0;
+    z-index: 10;
+  }
+
+  #nav-bottom{
+    width: 0;
+    display: none;
+  }
+}
+
+@media (min-width: 374px) and (max-width: 379px){
+  .closebtn {
+	  position: absolute;
+	  top: 30px;
+	  right: 12%;
+    font-size: 30px;
+    font-weight: 600;
+  }
+
+  .nav-title{
+    position: absolute;
+    left: 5%;
+    top: 33%;
+    font-size: x-large;
+    font-weight: 600;
+    color: #1d1d1d;
+  }
+}
+
+@media (min-width: 400px) and (max-width: 420px){
+  .closebtn {
+	  position: absolute;
+	  top: 30px;
+	  right: 12%;
+    font-size: 30px;
+    font-weight: 600;
+  }
+
+  .nav-title{
+    position: absolute;
+    left: 5%;
+    top: 35%;
+    font-size: x-large;
+    font-weight: 600;
+    color: #1d1d1d;
+  }
+}
+
+@media (min-width: 530px) and (max-width: 1020px){
+  .nav-title{
+    position: absolute;
+    left: 5%;
+    top: 53%;
+    font-size: xx-large;
+    font-weight: 600;
+    color: #1d1d1d;
+  }
+}
