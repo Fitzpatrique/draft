@@ -589,6 +589,7 @@ ul li a:focus { border-bottom: 3px solid #fdbe0e; }
       margin-top: -2.8em;
       margin-left: 7%;
       margin-bottom: 1em;
+
   }
 
 
@@ -751,7 +752,7 @@ ul li a:focus { border-bottom: 3px solid #fdbe0e; }
     font-size: 30px;
     font-weight: 800;
     margin: 0.6em 1em 0 0;
-    padding:0.2em 100% 2em 5%;
+    padding:0.2em 100% 5% 5%;
     background-color: #fff;
     padding-bottom: 0.2em;
     color: #1b1b1b;
@@ -761,9 +762,9 @@ ul li a:focus { border-bottom: 3px solid #fdbe0e; }
   .logo{
     display: flex;
     position: fixed;
-    height: 36px;
+    height: 28px;
     width: auto;
-    margin: 1.6em 0 0 15%;
+    margin: 1.7em 0 0 15%;
   }
 
   .icon1{
