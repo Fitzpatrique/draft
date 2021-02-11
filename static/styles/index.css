@@ -144,7 +144,7 @@ ul li a:focus { border-bottom: 3px solid #fdbe0e; }
   display: flex;
   margin-top: -1.7em;
   margin-left: 2.7rem;
-  height: 1.5em;
+  height: 16px;
 }
 
 .header{
