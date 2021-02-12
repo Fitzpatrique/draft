@@ -574,19 +574,20 @@ ul li a:focus { border-bottom: 3px solid #fdbe0e; }
 
   .search{
       width: 90%;
-      height: 2em;
-      margin-top: 5.5em;
+      height: 2.5em;
+      margin-top: 5em;
       margin-left: 0;
-      margin-bottom: 1em;
+      margin-bottom: 1.5em;
       border: none;
       background-color: #eaeaea;
-      border-radius: 4px;
+      border-radius: 3.5px;
       text-align: center;
+      
   }
 
   .btn{
       display: flex;
-      margin-top: -2.8em;
+      margin-top: -3.5em;
       margin-left: 7%;
       margin-bottom: 1em;
 
@@ -749,10 +750,8 @@ ul li a:focus { border-bottom: 3px solid #fdbe0e; }
   .menu{
     display: flex;
     position: fixed;
-    font-size: 30px;
-    font-weight: 800;
-    margin: 0.6em 1em 0 0;
-    padding:0.2em 100% 5% 5%;
+    margin: 1.6em 1em 1em 0;
+    padding:0.5em 100% 10% 3%;
     background-color: #fff;
     padding-bottom: 0.2em;
     color: #1b1b1b;
@@ -764,7 +763,7 @@ ul li a:focus { border-bottom: 3px solid #fdbe0e; }
     position: fixed;
     height: 28px;
     width: auto;
-    margin: 1.7em 0 0 15%;
+    margin: 1.8em 0 0 15%;
   }
 
   .icon1{
