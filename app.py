@@ -237,6 +237,25 @@ def zigi():
 
 
 
+@app.route('/alausaa')
+def alausaa():
+    return app.send_static_file('img/alausa_1088x576_crop_center.png')
+
+@app.route('/femii')
+def femii():
+    return app.send_static_file('img/femi_1088x576_crop_center.png')
+
+@app.route('/kareemm')
+def kareemm():
+    return app.send_static_file('img/kareem_1088x576_crop_center.png')
+
+@app.route('/ikengaa')
+def ikengaa():
+    return app.send_static_file('img/ikenga_1088x576_crop_center.png')
+
+
+
+
 @app.route('/index.css')
 def main1():
     return app.send_static_file('styles/index.css')
