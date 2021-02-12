@@ -1,3 +1,29 @@
+var imageArr = new Array(
+  "/alausaa",
+  "/femii",
+  "/kareemm",
+  "/ikengaa",
+)
+
+var num = 0
+
+function next(){
+  num ++;
+  if (num >= imageArr.length){
+    num = 0;
+  }
+
+  document.getElementById("sliders").src = imageArr[num]
+}
+
+function automate(){
+  window.setInterval(() => {
+    next()
+    
+  }, 10000);
+}
+
+
 function activateSayduck(){
   document.getElementById("sayduck").style.zIndex = "30";
 }
