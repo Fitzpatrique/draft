@@ -1,15 +1,72 @@
 {% extends 'base.html' %}
 
 {% block head %}
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" >
 {% endblock %}
  
 {% block body %}
  
 
-<div>
-    <a href="#" ><img  onclick="closeAll()" onmouseover="closeAll()" src="{{ url_for('static', filename = 'img/alausa/Sample.jpg')}}" width="100%" alt="image"></a>
+<div class="slides">
+    <a href="#" ><img id="sliders"  onclick="closeAll()" onmouseover="closeAll()" src="{{ url_for('static', filename = 'img/alausa_1088x576_crop_center.png')}}" width="94%"  alt="image"></a>
 </div>
+
+<div class="product-cat" onclick="closeAll()" onmouseover="closeAll()">
+    <div class="product-cat-1">
+        <a href="#"><div class="product-cat-3">
+            <div class="product-img">
+                <img onload="automate()" class="product-img" onclick="closeAll()" onmouseover="closeAll()" src="{{ url_for('static', filename = 'img/Chairs/Femi - website.jpg')}}" alt="image">
+            </div>
+            <div class="product-desc">
+                <span class="product-title">Femi</span><br><br>
+                <span class="product-price">On sale ₦45000</span><br><br>
+            </div>
+
+        </div></a>
+
+        <a href="#"><div class="product-cat-3">
+            <div class="product-img">
+                <img class="product-img" onclick="closeAll()" onmouseover="closeAll()" src="{{ url_for('static', filename = 'img/Sofas/Alausa 1.jpg')}}"  alt="image">
+            </div>
+                <span class="product-title">Alausa</span><br><br>
+                <span class="product-price">On sale ₦225000</span>
+
+        </div></a>
+
+    </div>
+
+    <div class="product-cat-2"><a href="#">
+        <div class="product-img">
+            <img class="product-img" onclick="closeAll()" onmouseover="closeAll()" src="{{ url_for('static', filename = 'img/Sofas/Ada.jpg')}}"  alt="image">
+        </div>
+            <span class="product-title">Ada</span><br><br>
+            <span class="product-price">On sale ₦109200</span>
+
+        </a></div>
+
+    <div class="product-cat-1">
+        <a href="#"><div class="product-cat-3">
+            <div class="product-img">
+                <img class="product-img" onclick="closeAll()" onmouseover="closeAll()" src="{{ url_for('static', filename = 'img/Tables/Andy - white.jpg')}}"  alt="image">
+            </div>
+                <span class="product-title">Andy</span><br><br>
+                <span class="product-price">On sale ₦40000</span><br><br>
+
+        </div></a>
+        <a href="#"><div class="product-cat-3">
+            <div class="product-img">
+                <img class="product-img" onclick="closeAll()" onmouseover="closeAll()" src="{{ url_for('static', filename = 'img/Chairs/Ikenga.jpg')}}"  alt="image">
+            </div>
+                <span class="product-title">Ikenga</span><br><br>
+                <span class="product-price">On sale ₦40000</span>
+
+        </div></a>
+
+    </div>
+
+</div>
+
+
 
 
 <!--div id="sayduck" class="sayduck" onclick="closeAll(), activateSayduck()" onmouseover="closeAll()">
@@ -26,7 +83,7 @@
         </div>
         <div class="letter-box">
             <form>
-                <input class="input-email" type="text" placeholder="Enter email">
+                <input  class="input-email" type="text" placeholder="Enter email">
                 <button class="btn1" type="submit">GO</button>
             </form>
         </div>
