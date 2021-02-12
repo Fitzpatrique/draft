@@ -750,7 +750,7 @@ ul li a:focus { border-bottom: 3px solid #fdbe0e; }
   .menu{
     display: flex;
     position: fixed;
-    margin: 1.6em 1em 1em 0;
+    margin: 1.4em 1em 1em 0;
     padding:0.5em 100% 10% 3%;
     background-color: #fff;
     padding-bottom: 0.2em;
